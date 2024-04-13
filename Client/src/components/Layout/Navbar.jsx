@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../App.css'
+import { Link } from 'react-router-dom'
 
 // border-b-2 border-b-neutral-100
 function Navbar() {
@@ -36,7 +37,7 @@ function Navbar() {
 
       <div className='font-semibold hidden md:inline'>
         <ul className='flex gap-8 text-xl'>
-          <li className='underlineLi'>Home & Furniture</li>
+          <Link to="/Home&Fur" className='underlineLi'>Home & Furniture</Link>
           <li>Beauty & Personal Care</li>
           <li>Kitchen & Dining</li>
           <li>Clothing & Accessories</li>
@@ -44,9 +45,9 @@ function Navbar() {
       </div>
 
       <div className='flex gap-4 text-lg text-black'>
-        <h2>Add Product</h2>
+        <Link to="/product">Add Product</Link>
         <h2>Search</h2>
-        <h2>Login</h2>
+        <Link to="/nonexistent">Login</Link>
         <button><i class="fa-regular fa-heart"></i></button>
         <button><i class="fa-solid fa-bag-shopping"></i></button>
       </div>

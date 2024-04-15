@@ -17,10 +17,10 @@ const productSchema = new Schema({
     stock_quantity : {
         type: Number,
     },
-    isActive: {
-        type: Boolean,
-        default: true
-      },
+    // isActive: {
+    //     type: Boolean,
+    //     default: true
+    // },
 
 }, {timestamps:true});
 

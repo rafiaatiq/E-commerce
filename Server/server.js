@@ -6,6 +6,8 @@ const dotenv = require("dotenv");
 dotenv.config();
 const User = require("./models/user.js");
 
+const productRoutes = require("./routes/productRoutes.js");
+
 
 app.use(express.json()); //we can use body parser also
 app.use(cors());
@@ -24,6 +26,8 @@ main()
 async function main() {
   await mongoose.connect(process.env.URL);
 }
+
+app.use("/products", productRoutes);
 
 app.get("/", (req, res) => {
     res.send("WORKING APP!!");

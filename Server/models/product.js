@@ -5,8 +5,9 @@ const productSchema = new Schema({
     name : {
         type : String,
     },
-    imageUrl : {
-        type : String,
+    image: {
+        url:  String,
+        filename : String,
     }, 
     description : {
         type: String,

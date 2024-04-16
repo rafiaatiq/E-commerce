@@ -1,6 +1,8 @@
 const express = require("express");
 const Product = require("../models/product");
-
+const multer = require("multer");
+const {storage} = require("../cloudConfig.js");
+const upload = multer({ storage });
 const router = express.Router();
 
 //Get Product
@@ -16,23 +18,26 @@ router.get("/", async (req,res) => {
 })
 
 //Post Product
-router.post("/", async (req,res) => {
-    res.send(req.body);
-    // try {
-    //     const {name, price, imageUrl, description, stock_quantity} = req.body;
-    //     const addProduct = await Product.create({
-    //         name : name,
-    //         price : price,
-    //         imageUrl : imageUrl,
-    //         description : description,
-    //         stock_quantity : stock_quantity
-    //     })
-    //     res.status(201).json(addProduct);
-    //     console.log("Product was added");
-    // } catch (error) {
-    //     console.log(error);
-    //     res.status(400).json({error : error.message});
-    // }
+router.post("/", upload.single('image'), async (req,res) => {
+    console.log("req.body : ",req.body);
+    try {
+        if (!req.file) {
+            return res.status(400).json({ error: 'No file uploaded' });
+        }
+        let url = req.file.path;
+        let fileName = req.file.filename;
+
+        const newProduct = new Product(req.body);
+
+        newProduct.image = {url, fileName};
+
+        let savedProduct = await newProduct.save();
+        res.status(201).json(savedProduct);
+        console.log("Product was added");
+    } catch (error) {
+        console.log(error);
+        res.status(400).json({error : error.message});
+    }
 })
 
 

@@ -4,17 +4,51 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="w-full bg-[#f4f4f4] text-black  py-4 static bottom-0 mt-10">
-      <div className="py-10 container mx-auto flex justify-center items-center gap-4">
+      <div className=' bg-[#f4f4f4] h-24 flex justify-center items-center gap-24'>
+
+        <div className='flex gap-4'>
+          <div className='text-5xl'>
+            <i className="fa-solid fa-truck-fast"></i>
+          </div>
+          <div className='flex flex-col'>
+            <h1 className='text-xl font-medium'>Free worldwide shipping</h1>
+            <h1 className='text-[#828282]'>On all orders over $75.00</h1>
+          </div>
+        </div>
+
+        <div className='flex  gap-4'>
+          <div className='text-5xl'>
+            <i className="fa-solid fa-shield-halved"></i>
+          </div>
+          <div className='flex flex-col'>
+            <h1 className='text-xl font-medium'>100% Payment secure</h1>
+            <h1 className='text-[#828282]'>We ensure secure payment</h1>
+          </div>
+        </div>
+
+        <div className='flex  gap-4'>
+          <div className='text-5xl'>
+            <i className="fa-solid fa-wallet"></i>
+          </div>
+          <div className='flex flex-col'>
+            <h1 className='text-xl font-medium'>Money back guarantee</h1>
+            <h1 className='text-[#828282]'>You can return any item</h1>
+          </div>
+        </div>
+       
+      </div>
+
+      <div className="py-10 container mx-auto flex justify-center items-center gap-4 border-t-2 border-t-grey-100 mt-10">
 
         <div className='h-min w-80'>
           <h1 className='font-bold text-3xl'>FUSION HOME</h1>
           <p className='mt-4 text-[#828282]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, soluta?</p>
 
           <div className='flex gap-4 text-xl mt-6'>
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-threads"></i>
+            <i className="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-twitter"></i>
+            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-threads"></i>
           </div>
         </div>
 

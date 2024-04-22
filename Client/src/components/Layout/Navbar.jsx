@@ -13,15 +13,15 @@ function Navbar() {
        
       <div className='flex text-white gap-4 text-sm'>
         <div>
-          <h2><i class="fa-regular fa-envelope"></i> Support</h2>
+          <h2><i className="fa-regular fa-envelope"></i> Support</h2>
         </div>
 
         <div>
-          <h2><i class="fa-solid fa-earth-americas"></i> Store Location</h2>
+          <h2><i className="fa-solid fa-earth-americas"></i> Store Location</h2>
         </div>
 
         <div>
-          <h2><i class="fa-solid fa-phone"></i> 000-1010-111</h2>
+          <h2><i className="fa-solid fa-phone"></i> 000-1010-111</h2>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@ function Navbar() {
 
       <div className='flex justify-center items-center gap-4'>
         <div className='inline md:hidden'>
-        <i class="fa-solid fa-bars text-xl"></i>
+        <i className="fa-solid fa-bars text-xl"></i>
         </div>
         <h2 className='rajdhani-medium text-2xl'>FUSION HOME</h2>
       </div>
@@ -48,8 +48,11 @@ function Navbar() {
         <Link to="/product">Add Product</Link>
         <h2>Search</h2>
         <Link to="/nonexistent">Login</Link>
-        <button><i class="fa-regular fa-heart"></i></button>
-        <button><i class="fa-solid fa-bag-shopping"></i></button>
+        <button><i className="fa-regular fa-heart"></i></button>
+        <button><i className="fa-solid fa-bag-shopping"></i></button>
+        {/* <div className='h-[200vh] w-96 z-40  bg-white mt-44'>
+
+        </div> */}
       </div>
       </div>
     </>

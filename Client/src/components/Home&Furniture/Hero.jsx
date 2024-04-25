@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import product from '../assets/product.jpeg'
 // import KitchenCover from '../assets/KitchenCover.jpeg'
 import Sofa from '../../assets/Sofa.jpeg';
+import { Link } from 'react-router-dom';
 // import ClotihngCover from '../assets/ClotihngCover.jpeg'
 
 const slides = [
@@ -25,7 +26,7 @@ function Hero() {
         <h2 className='font-general font-light absolute top-[11rem] left-[10rem] text-2xl'>New Furniture Collection</h2>
             <h2 className='absolute top-[14rem] left-[10rem] text-6xl tracking-wide rajdhani-bold'>MODERN CABINET</h2>
             <h2 className='absolute top-[18rem] left-[10rem] text-6xl tracking-wide rajdhani-bold'>COMFORT  SOFA</h2>
-            <button className='absolute top-[23rem] left-[10rem] text-lg h-14 w-44 bg-black text-white rounded-lg'>EXPLORE MORE</button>
+            <Link to='/collection' className='absolute top-[23rem] left-[10rem] text-lg h-12 w-44 flex justify-center items-center bg-black text-white rounded-lg'>View Collections</Link>
             <button className='absolute top-[23rem] left-[3rem] text-2xl h-10 w-10 bg-white rounded-full' onClick={prev}>
             <i class="fa-solid fa-chevron-left"></i>
             </button>

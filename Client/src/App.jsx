@@ -5,6 +5,7 @@ import Home from './components/Home&Furniture/Home';
 import { Outlet } from 'react-router-dom';
 import Product from './components/Product';
 import NotFound from './components/PageNotFound/NotFound';
+import Collection from './components/Home&Furniture/Collection';
 
 // import './App.css'
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path="/product" element={<Product/>}/>
         <Route path="/Home&Fur" element={<Home/>}/>
+        <Route path="/collection" element={<Collection/>}/>
         <Route path="/nonexistent" element={<NotFound />}/>
       </Routes>
       </Layout>

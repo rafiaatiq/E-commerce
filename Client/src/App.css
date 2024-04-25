@@ -36,3 +36,8 @@
 .card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+.cart-open {
+  /* Adjust the opacity of the background elements when cart opens */
+  opacity: 0.5; /* Adjust as needed */
+  /* Add any other styles you want to apply when the cart is open */
+}
